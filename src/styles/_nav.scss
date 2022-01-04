@@ -19,10 +19,10 @@ nav {
 
   a {
     text-decoration: none;
-    color: $secondary-light-light-color;
+    color: lighten($primary-color, 20%);
   }
   a:hover {
-    color: lighten($secondary-light-light-color, 20%);
+    color: lighten($primary-color, 80%);
   }
 }
 

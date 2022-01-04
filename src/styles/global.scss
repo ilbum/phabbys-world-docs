@@ -14,7 +14,7 @@ $hero-div-height: 15rem;
 // element overwrites
 body {
   background-color: $primary-dark-color;
-  color: $primary-dark-color;
+  color: $primary-dark-dark-color;
   font: 100% $font-stack;
   margin: 0 !important;
   padding: 0 !important;
@@ -48,7 +48,7 @@ p {
 // ID
 #blog-hero-div {
   background-color: $primary-color;
-  color: $secondary-light-light-color;
+  color: lighten($primary-color, 20%);
   height: $hero-div-height;
   // padding: 1rem;
 
@@ -68,7 +68,7 @@ p {
 
 #hero-div {
   background-color: $primary-color;
-  color: $secondary-light-light-color;
+  color: lighten($primary-color, 20%);
   height: $hero-div-height;
   // padding: 1rem;
 
