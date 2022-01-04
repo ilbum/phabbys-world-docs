@@ -1,0 +1,137 @@
+@import './sizing-variables';
+@import './nav';
+@import './colors';
+@import './footer';
+
+// TODO reorganize the element overwrites into different file
+// https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+// https://www.youtube.com/watch?v=CR-a8upNjJ0
+
+// variables
+$font-stack: Helvetica, sans-serif;
+$hero-div-height: 15rem;
+
+// element overwrites
+body {
+  background-color: $primary-dark-color;
+  color: $primary-dark-color;
+  font: 100% $font-stack;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+// Classes
+.root-container-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: $md) {
+  .root-container-flex {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+// ID
+#blog-hero-div {
+  background-color: $primary-color;
+  color: $secondary-light-light-color;
+  height: $hero-div-height;
+  // padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  h1 {
+    position: absolute;
+    margin-left: 1rem;
+  }
+}
+
+#content-div {
+  padding: 1rem;
+}
+
+#hero-div {
+  background-color: $primary-color;
+  color: $secondary-light-light-color;
+  height: $hero-div-height;
+  // padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  h1 {
+    position: absolute;
+    margin-left: 1rem;
+  }
+}
+
+#main-container {
+  // flexbox
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  // other properties
+  background-color: white;
+  margin: auto;
+  padding: $nav-height 0 0 0; //TODO make this a variable
+
+  // sizing
+  min-height: 90vh;
+  width: 100%;
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: $md) {
+  #blog-hero-div {
+    height: $hero-div-height;
+  }
+  #hero-div {
+    height: $hero-div-height + 5rem;
+  }
+
+  #main-container {
+    padding: 0 0 0 $nav-width;
+    min-height: 100vh;
+    width: 100%;
+  }
+}
+
+@media (min-width: $lg) {
+  #hero-div {
+    height: $hero-div-height + 10rem;
+  }
+}
+
+@media (min-width: $xl) {
+  #hero-div {
+    height: $hero-div-height + 15rem;
+  }
+}
+
+@media (min-width: $xxl) {
+  #hero-div {
+    height: $hero-div-height + 20rem;
+  }
+}

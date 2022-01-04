@@ -1,0 +1,33 @@
+import { graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import * as React from 'react';
+import BlogLayout from '../../components/blog-layout';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+
+const BlogPost = ({ data }) => {
+  return (
+    <BlogLayout pageTitle={data.mdx.frontmatter.title}>
+      <MDXRenderer localImages={data.mdx.frontmatter.embeddedImagesLocal}>
+        {data.mdx.body}
+      </MDXRenderer>
+    </BlogLayout>
+  );
+};
+
+export const query = graphql`
+  query ($id: String) {
+    mdx(id: { eq: $id }) {
+      frontmatter {
+        title
+        embeddedImagesLocal {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
+          }
+        }
+      }
+      body
+    }
+  }
+`;
+
+export default BlogPost;
