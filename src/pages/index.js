@@ -2,7 +2,7 @@ import { Link, graphql } from 'gatsby';
 import * as React from 'react';
 import Layout from '../components/layout';
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   return (
     <Layout pageTitle="Phabby's World Documentation">
       <h2>Motivation</h2>
@@ -13,8 +13,29 @@ const IndexPage = () => {
 
       <h2>Pages</h2>
       <p>Redo this query</p>
+      {data.allMdx.nodes.map((node) => (
+        <article key={node.id}>
+          <Link to={`books/${node.slug}`}>
+            <h3>{node.frontmatter.title}</h3>
+          </Link>
+        </article>
+      ))}
     </Layout>
   );
 };
+
+export const allMdxQuery = graphql`
+  query {
+    allMdx {
+      nodes {
+        frontmatter {
+          title
+        }
+        id
+        slug
+      }
+    }
+  }
+`;
 
 export default IndexPage;
