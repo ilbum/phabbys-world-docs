@@ -6,6 +6,14 @@ import BlogLayout from '../../components/blog-layout';
 const BlogPost = ({ data }) => {
   return (
     <BlogLayout pageTitle={data.mdx.frontmatter.title}>
+      <h1>Concepts</h1>
+      <ul>
+        <li>
+          {data.mdx.frontmatter.concepts.map((bulletPoint) => (
+            <li>{bulletPoint}</li>
+          ))}
+        </li>
+      </ul>
       <MDXRenderer localImages={data.mdx.frontmatter.embeddedImagesLocal}>
         {data.mdx.body}
       </MDXRenderer>
@@ -18,6 +26,7 @@ export const query = graphql`
     mdx(id: { eq: $id }) {
       frontmatter {
         title
+        concepts
         embeddedImagesLocal {
           childImageSharp {
             gatsbyImageData(layout: CONSTRAINED)
