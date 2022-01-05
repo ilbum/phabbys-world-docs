@@ -8,6 +8,7 @@ hero_image: ''
 hero_image_alt: ''
 hero_image_credit_text: ''
 embeddedImagesLocal:
+  - Choco-900-zoom.png
 ---
 
 import { getImage, GatsbyImage } from 'gatsby-plugin-image';
@@ -17,3 +18,9 @@ import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 _this page will display all the image assets_
 
 TODO display all the images
+
+<GatsbyImage
+  alt="Choco"
+  image={getImage(props.localImages[0])}
+  className="max-width-40rem"
+/>
