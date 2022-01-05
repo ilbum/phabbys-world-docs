@@ -12,6 +12,11 @@ const IndexPage = ({ data }) => {
       </p>
 
       <h2>Pages</h2>
+      <article>
+        <p>
+          <Link to="/books">List of Books</Link>
+        </p>
+      </article>
       {data.allMdx.nodes.map((node) => (
         <article key={node.id}>
           <p>
@@ -27,11 +32,12 @@ const IndexPage = ({ data }) => {
 
 export const allMdxQuery = graphql`
   query {
-    allMdx {
+    allMdx(filter: { frontmatter: { type: { eq: "docs" } } }) {
       nodes {
         frontmatter {
           title
           type
+          concepts
         }
         id
         slug

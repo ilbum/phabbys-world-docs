@@ -10,8 +10,7 @@ const Navbar = () => {
             <NavLinkLi to="/">Phabby's World</NavLinkLi>
           </ul>
           <ul className="menu-list">
-            <NavLinkLi to="/books/book-1">Book 1</NavLinkLi>
-            <NavLinkLi to="/books/book-2">Book 2</NavLinkLi>
+            <NavLinkLi to="/books">Books</NavLinkLi>
             <NavLinkLi to="/docs/characters">Characters</NavLinkLi>
           </ul>
         </div>
