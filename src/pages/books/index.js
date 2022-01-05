@@ -26,8 +26,11 @@ const IndexPage = ({ data }) => {
 };
 
 export const allBooksQuery = graphql`
-  query {
-    allMdx(filter: { frontmatter: { type: { eq: "books" } } }) {
+  {
+    allMdx(
+      filter: { frontmatter: { type: { eq: "books" } } }
+      sort: { fields: frontmatter___title }
+    ) {
       nodes {
         frontmatter {
           title
