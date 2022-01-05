@@ -2,7 +2,6 @@ import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import * as React from 'react';
 import BlogLayout from '../../components/blog-layout';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const BlogPost = ({ data }) => {
   return (
