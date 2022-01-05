@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-index-js",
     "path": "/",
-    "result": {"data":{"allMdx":{"nodes":[{"frontmatter":{"title":"Characters","type":"docs","concepts":["characters"]},"id":"bc7699cf-63cd-5bf7-8a83-4ab8ebc28bb8","slug":"characters/"},{"frontmatter":{"title":"Gallery Page","type":"docs","concepts":["gallery"]},"id":"d18c180c-1b0a-5c6c-9fb8-7b6ba8de0446","slug":"gallery/"},{"frontmatter":{"title":"Documentation Style Guide","type":"docs","concepts":[""]},"id":"cf2d2f48-2087-5976-b232-43701321f385","slug":"style-guide"}]}},"pageContext":{}},
+    "result": {"data":{"allMdx":{"nodes":[{"frontmatter":{"title":"Documentation Style Guide","type":"docs","concepts":[""]},"id":"cf2d2f48-2087-5976-b232-43701321f385","slug":"style-guide"},{"frontmatter":{"title":"Characters","type":"docs","concepts":["characters"]},"id":"bc7699cf-63cd-5bf7-8a83-4ab8ebc28bb8","slug":"characters/"}]}},"pageContext":{}},
     "staticQueryHashes": []}
