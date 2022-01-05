@@ -3,13 +3,24 @@ title: 'Characters'
 date-created: '2021-12-21'
 date-modified: '2021-12-27'
 author: 'Ilbum Kwak'
-type: ''
+type: 'docs'
 hero_image: ''
 hero_image_alt: ''
 hero_image_credit_text: ''
+embeddedImagesLocal:
+  - phabby-900-zoom.png
+  - Choco-900-zoom.png
 ---
 
+import { getImage, GatsbyImage } from 'gatsby-plugin-image';
+
 # Phabby
+
+<GatsbyImage
+  alt="Phabby"
+  image={getImage(props.localImages[0])}
+  className="max-width-5rem"
+/>
 
 **Name** Phabby
 
@@ -45,6 +56,12 @@ TODO
 - https://filestage.io/blog/character-bio-template/
 
 # Choco
+
+<GatsbyImage
+  alt="Phabby"
+  image={getImage(props.localImages[1])}
+  className="max-width-5rem"
+/>
 
 **Name** Choco Le Coco
 
