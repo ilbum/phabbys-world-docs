@@ -1,8 +1,8 @@
 {
-  "name": "minimal-boiler-plate",
+  "name": "phabbys-world-docs",
   "version": "1.0.0",
   "private": true,
-  "description": "Minimal Boiler Plate",
+  "description": "Phabby's World Documentation",
   "author": "Ilbum Kwak",
   "keywords": [
     "gatsby"
@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
@@ -27,5 +28,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "sass": "^1.45.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }

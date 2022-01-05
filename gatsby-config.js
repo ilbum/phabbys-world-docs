@@ -1,6 +1,7 @@
 module.exports = {
+  pathPrefix: '/phabbys-world-docs',
   siteMetadata: {
-    siteUrl: 'https://www.yourdomain.tld', // TODO update this
+    siteUrl: 'https://phabbysworld.com', // TODO update this
     title: "Phabby's World Documentation",
   },
   plugins: [
