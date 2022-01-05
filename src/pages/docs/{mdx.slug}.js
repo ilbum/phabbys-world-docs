@@ -5,12 +5,11 @@ import BlogLayout from '../../components/blog-layout';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const BlogPost = ({ data }) => {
-  const image = getImage(data.mdx.frontmatter.hero_image);
-
   return (
     <BlogLayout pageTitle={data.mdx.frontmatter.title}>
-      <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} />
-      <MDXRenderer>{data.mdx.body}</MDXRenderer>
+      <MDXRenderer localImages={data.mdx.frontmatter.embeddedImagesLocal}>
+        {data.mdx.body}
+      </MDXRenderer>
     </BlogLayout>
   );
 };
@@ -20,7 +19,11 @@ export const query = graphql`
     mdx(id: { eq: $id }) {
       frontmatter {
         title
-        date_modified
+        embeddedImagesLocal {
+          childImageSharp {
+            gatsbyImageData(layout: CONSTRAINED)
+          }
+        }
       }
       body
     }

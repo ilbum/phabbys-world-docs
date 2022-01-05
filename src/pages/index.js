@@ -12,12 +12,13 @@ const IndexPage = ({ data }) => {
       </p>
 
       <h2>Pages</h2>
-      <p>Redo this query</p>
       {data.allMdx.nodes.map((node) => (
         <article key={node.id}>
-          <Link to={`books/${node.slug}`}>
-            <h3>{node.frontmatter.title}</h3>
-          </Link>
+          <p>
+            <Link to={`${node.frontmatter.type}/${node.slug}`}>
+              {node.frontmatter.title}
+            </Link>
+          </p>
         </article>
       ))}
     </Layout>
@@ -30,6 +31,7 @@ export const allMdxQuery = graphql`
       nodes {
         frontmatter {
           title
+          type
         }
         id
         slug

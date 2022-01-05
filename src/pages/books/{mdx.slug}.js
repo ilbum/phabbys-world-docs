@@ -21,7 +21,7 @@ export const query = graphql`
         title
         embeddedImagesLocal {
           childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
+            gatsbyImageData(layout: CONSTRAINED)
           }
         }
       }
