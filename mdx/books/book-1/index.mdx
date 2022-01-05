@@ -1,5 +1,5 @@
 ---
-title: 'Book 1'
+title: 'Book 1 - Making sense of 1s and 0s'
 date-created: '2021-12-21'
 date-modified: '2021-12-27'
 author: 'Ilbum Kwak'
@@ -9,6 +9,8 @@ hero_image_alt: ''
 hero_image_credit_text: ''
 embeddedImagesLocal:
   - decision-tree-learning-journey.png
+  - decision-tree-control-flow.png
+  - processor-input-output.png
 ---
 
 import { getImage, GatsbyImage } from 'gatsby-plugin-image';
@@ -60,17 +62,69 @@ _Note: This is broken up into different scenes._
 - Choco informs her that he is a Doggo and then goes into a quick backstory.
 - Phabby, out of compassion for her new friend, wants to help and suggests they go to their neighbor's house. Her dad is being mentored by their neighbor.
 
-## Neighbors House
+## George Boole's House
 
-- Neighbor is **George Boole**. A self taught computer programmer that loves to ramble about math and stuff.
+- Their neighbor is **George Boole**. A self taught computer programmer that loves to ramble about math and stuff.
 - He's not phased by inter-universe travelling and Doggo's story. He felt that this would likely happen and before he starts to ramble about aliens in Egypt, Phabby and Doggo remind him that they need to learn to program.
 - He then begins to speak about propositional logic.
-- insert photo here
 - <GatsbyImage
     alt="Decision Tree Learning"
     image={getImage(props.localImages[0])}
+    className="max-width-40rem"
   />
+- "Can you give me a second?"
+  - Is this one second? Or is this a moment that is not too long?
+  - But then what is too long of a moment to wait?
+- "Do you dream in your sleep?"
+- "I need to work a full day tomorrow."
+- George Boole explains
+  - The statements above are common moments we have everyday and yet we all function okay.
+  - The computer's mind does not understand this kind of reality.
+  - We need to have it work at the true and false level.
 
-## Things to add
+<br />
+<hr />
+<br />
 
-- "it is really raining today"
+# Concepts
+
+_Note: These are older notes I will repurpose_
+
+## 1. **Programming is a learning a new language**
+
+- **Communication**
+  - Programming is learning a new language
+  - English / Human Communication
+    - **One word or sentence can have multiple meanings**
+      - "Can you give me a second?"
+      - "It is really raining today!"
+    - We also have communication cues that are non-verbal
+    - We often speak in functions, that encapsulate a lot of commands.
+      - Make a sandwich
+        - What kind of sandwich
+        - Toast the bread
+        - etc ...
+  - **Emphasize computer communication has one meaning**
+    - This is why it is a logical communication system
+    - Programming starts before the computer
+    - Sometimes it's good even when talking to humans!
+    - Tidbits
+      - No context
+
+## 2. **Intro to Programming Language Concepts.**
+
+- **Unclear Definitions**
+  - Logic is strict and removes the ambiguity.
+  - What is a sandwich?
+    - Hot dog a sandwich?
+    - PB&J a sandwich?
+    - Meat, cheese, veggie, bread?
+- Some things in life are easy to map out as binary and others are degrees of truth. Or depending on how the question is asked, it can have more answers than yes and no. True or false.
+- **Binary thinking**
+  - We do this all the time, especially with political concepts
+- **Introduce Control Flow**
+- <GatsbyImage
+    alt="Decision Tree Control Flow"
+    image={getImage(props.localImages[1])}
+    className="max-width-40rem"
+  />

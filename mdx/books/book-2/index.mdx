@@ -1,22 +1,48 @@
 ---
-title: 'Book 2'
+title: 'Book 2 - Inside the Computer'
 date-created: '2021-12-21'
 date-modified: '2021-12-27'
 author: 'Ilbum Kwak'
-type: ''
+type: 'books'
 hero_image: ''
 hero_image_alt: ''
 hero_image_credit_text: ''
+embeddedImagesLocal:
+  - processor-input-output.png
 ---
 
-# Introduction
+import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 
-TODO
+# Concepts
+
+- What is a computer?
+  - Calculator is even a computer (fixed program computer)
+    - We'd have to bring different devices to do different things
+    - Now we have portable computers that do a lot of things.
+  - Stored Program Computer
+    - Machine that stores and executes programs
+- Computer Diagram / Hardware
+  - CPU
+  - RAM
+  - ROM
+  - Buses
+  - Long-term memory storage
+    - Average smartphone has over 64 gb of memory
+    - 1 megabyte can store a classic literature novel
+    - Expect most computers to hold at least a million books
+  - I/O Controller
+  - Heatsink
+- Tube to Transistor
+  - Explain true and false / electric current on and off
+    - punch card programming to programming languages
+- <GatsbyImage
+    alt="Processor Input Output Diagram"
+    image={getImage(props.localImages[0])}
+    className="max-width-40rem"
+  />
+- Binary Math example
+- Programming Languages
 
 # Storyboard
-
-_Note: This is broken up into different scenes._
-
-## TODO
 
 - TODO
